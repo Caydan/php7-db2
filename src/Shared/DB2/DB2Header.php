@@ -24,6 +24,8 @@ class DB2Header
     public $flags;
     public $idIndex;
     public $structure;
+    public $totalFieldCount;
+    public $commonDataTableSize;
 
     public function hasOffsetMap() : bool
     {
@@ -56,6 +58,8 @@ class DB2Header
         $header->copyTableSize = $reader->readInt32();
         $header->flags = $reader->readInt16();
         $header->idIndex = $reader->readInt16();
+        $header->totalFieldCount = $reader->readInt32();
+        $header->commonDataTableSize = $reader->readInt32();
         $header->structure = DB2Structure::read($reader, $header->fieldCount);
         return $header;
     }
