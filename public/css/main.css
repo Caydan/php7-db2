@@ -1,0 +1,220 @@
+@font-face {
+    font-family: 'Lobster';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lobster'), url(fonts/lobster.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Ubuntu Light'), local('Ubuntu-Light'), url(neu/fonts/ubuntu-300.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Ubuntu'), url(fonts/ubuntu-400.woff) format('woff');
+}
+* {
+    margin: 0;
+    padding: 0;
+	background: rgb(6,18,25);
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+h1{	 
+	margin: 30px 20px;
+	color: greenyellow;
+    text-align: center; 
+
+    font-family: 'Lobster', Arial, Helvetica, sans-serif;
+} 
+#search {
+    width: 357px;
+    margin: 0px auto;
+}
+.search_text{
+    width: 297px;
+    padding: 15px 0 15px 20px;
+    font-size: 16px;
+    border: 1px solid #444;
+    height: 52px;
+    margin-right: 0;
+    color: white;
+    outline: none;
+	background: linear-gradient(#333, #222);
+    float: left;
+    box-sizing: border-box;
+    transition: all 0.15s;
+}
+
+.search_text:focus {
+    animation: glow 800ms ease-out infinite alternate;
+	background: #222922;
+	background: linear-gradient(#333, #222);
+	border-color: #393;
+
+	color: #efe;
+	outline: none;
+}
+.search_button {
+    border: 1px solid #444;
+    background:  url(img/search.png) center no-repeat;
+    width: 60px;
+    float: left;
+    padding: 0;
+    text-align: center;
+    height: 52px;
+    cursor: pointer;
+}
+.nav {
+    padding: 0;
+    display: block;
+}
+.options ul {
+    padding: 0;
+    margin: 0;
+}
+.nav ul li {
+    padding: 0;
+    float: left;
+    list-style-type: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.nav ul li a {
+    font-size: 16px;
+    color: white;
+    display: block;
+    line-height: 30px;
+    padding: 0 26px;
+    text-decoration: none;
+    font-family: Montserrat, sans-serif;
+}
+.nav li a:hover {
+    color: #5f5;
+}
+ 
+.options a{
+    border-left: 0 none;
+}
+.options>a {
+    background-image: url(img/triangle.png);
+    background-position: 85% center;
+    background-repeat: no-repeat;
+    padding-right: 42px;
+}
+.subnav {
+    visibility: hidden;
+    position: absolute;
+    top: 110%;
+    right: 0;
+    width: 145px;
+    height: auto;
+    opacity: 0;
+    transition: all 0.1s;
+}
+.subnav li {
+    float: none;
+}
+.subnav li a {
+    border-bottom: 1px solid #2e2e2e;
+}
+.options:hover .subnav {
+	color: #5f5;
+    visibility: visible;
+    top: 100%;
+    opacity: 1;
+}
+.result table { 
+	border-collapse: collapse; 
+	text-align: left; 
+	width: 100%; 
+} 
+.result {
+	font: normal 12px/150% Arial, Helvetica, sans-serif; 
+	background: #fff; 
+	overflow: hidden; 
+	border: 2px solid #20DE0B; 
+	-webkit-border-radius: 5px; -moz-border-radius: 5px; 
+	border-radius: 5px; 
+}
+.result table td, 
+.result table th {
+	padding: 8px 10px; 
+}
+.result table thead th {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3AE817), color-stop(1, #041702) );
+	background:-moz-linear-gradient( center top, #3AE817 5%, #041702 100% );
+	background-color:#3AE817; 
+	color:#FFFFFF; 
+	font-size: 15px; 
+	font-weight: bold; 
+	border-left: 2px solid #36752D; 
+} 
+.result table thead th:first-child { 
+	border: none; 
+}.result table tbody td { 
+	color: #275420; 
+	border-left: 1px solid #37F422;
+	font-size: 13px;
+	font-weight: normal; 
+}
+.result table tbody .alt td { 
+	color: #5f5; 
+}
+.result table tbody td:first-child { 
+	border-left: none; 
+}
+.result table tbody tr:last-child td { 
+	border-bottom: none; 
+}
+.result table tfoot td div { 
+	border-top: 1px solid #20DE0B;
+} 
+.result table tfoot td { 
+	padding: 0; 
+	font-size: 12px 
+} 
+.result table tfoot td div{ 
+	padding: 7px; 
+}
+.result table tfoot td ul { 
+	margin: 0; 
+	padding:0; 
+	list-style: none; 
+	text-align: right; 
+}
+.result table tfoot  li { 
+	display: inline; 
+}
+.result table tfoot li a { 
+	text-decoration: none; 
+	display: inline-block;  
+	padding: 2px 8px; 
+	margin: 1px;
+	color: #FFFFFF;
+	border: 1px solid #36752D;
+	-webkit-border-radius: 3px; 
+	-moz-border-radius: 3px; 
+	border-radius: 3px; 
+}
+.result table tfoot ul.active, .result table tfoot ul a:hover { 
+	text-decoration: none;
+	border-color: #275420; 
+	color: #FFFFFF; 
+	background: none; 
+}
+.search-bar {
+    display: block;
+    margin: 0px auto;
+}
+.clearfix {
+    clear: both;
+}
